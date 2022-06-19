@@ -1,5 +1,5 @@
 <template>
-  <section><br><br>
+  <section id="game"><br><br>
     <div class="textField">
       <div class="title">
         <p>

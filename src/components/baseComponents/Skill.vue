@@ -198,7 +198,7 @@ section{
   "sk": {
     "skillTitle": "JAZYKY",
     "skillSub": "PROGRAMOVANIE",
-    "skillBar1": "Táto stránka odzrkadluje môj level v čase jej programovania.",
+    "skillBar1": "Táto stránka odzrkadľuje môj level v čase jej programovania.",
     "skillBar2": "Rozširovanie funkčnosti webstránok a webové aplikácie.",
     "skillBar3": "Schopnosť navrhnúť a vyrobiť funkčné embedded zariadenia.",
     "skillBar4": "Aktuálne sa venujem aj Djnago frameworku spolu s Pythonom.",

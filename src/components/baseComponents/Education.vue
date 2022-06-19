@@ -98,9 +98,15 @@ import {useI18n} from "vue-i18n";
 export default {
   name: "Education",
 
+  data(){
+    return{
+      pageLocale: this.locale
+    }
+  },
+
   setup() {
-    const { t } = useI18n({inheritLocale: true,})
-    return { t }
+    const { locale, t } = useI18n({inheritLocale: true,})
+    return { locale, t }
   },
 
   mounted() {

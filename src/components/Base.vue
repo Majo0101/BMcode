@@ -5,7 +5,7 @@
     <Experience/>
     <Education/>
     <Skill/>
-
+    <CircleCharts/>
     <Gallery/>
     <Game/>
     <Other/>
@@ -25,6 +25,7 @@ import Game from "./baseComponents/Game.vue";
 import Other from "./baseComponents/Other.vue";
 import Contact from "./baseComponents/Contact.vue";
 import Copyright from "./baseComponents/Copyright.vue";
+import CircleCharts from "./baseComponents/CircleCharts.vue";
 
 export default {
   name: "Base",
@@ -34,6 +35,7 @@ export default {
     Experience,
     Education,
     Skill,
+    CircleCharts,
     Gallery,
     Game,
     Other,
@@ -59,9 +61,7 @@ export default {
     right: 0;
     left: 0;
     top: 60.5em;
-
     height: auto;
-
     background-color: #3D4849;
     display: flex;
     flex-direction: column;
@@ -74,9 +74,7 @@ export default {
     right: 0;
     left: 0;
     top: 50.5em;
-
     height: auto;
-
     background-color: #3D4849;
     display: flex;
     flex-direction: column;
@@ -89,9 +87,7 @@ export default {
     right: 0;
     left: 0;
     top: 40.5em;
-
     height: auto;
-
     background-color: #3D4849;
     display: flex;
     flex-direction: column;

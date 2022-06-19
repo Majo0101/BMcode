@@ -69,7 +69,7 @@
         <span id="character1" style="--i:1">{{ t('lang1') }}</span>
         <span id="character2" style="--i:2">{{ t('lang2') }}</span>
       </div>
-      <a href="../../index.html" style="text-decoration: none;">
+      <a href="./public/CV.pdf" download="CV_SK/EN" style="text-decoration: none;">
         <div class="navButton" id="download">
           <span style="--i:1">{{ t('down1') }}</span>
           <span style="--i:2">{{ t('down2') }}</span>
@@ -217,6 +217,51 @@ export default {
         $(".navButtonField").css("display", "flex");
       }
     });
+
+    let homeTop = $('#home').offset().top;
+    let homeHeight = $('#home').height() + $('#aboutMeDiv').height() - value() - 10;
+    let experienceTop = $('#experience').offset().top - value() - 10;
+    let experienceHeight = $('#experience').height() + experienceTop;
+    let educationTop = $('#education').offset().top - value() - 10;
+    let educationHeight = $('#education').height() + educationTop;
+    let skillTop = $('#skill').offset().top - value() - 10;
+    let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
+    let galleryTop = $('#gallery').offset().top - value() - 10;
+    let galleryHeight = $('#gallery').height() + galleryTop;
+    let otherTop = $('#game').offset().top - value() - 10;
+    let otherHeight = $('#game').height() + otherTop + $('#other').height() + $('#contact').height();
+    $(window).scroll(function() {
+      if ( $(this).scrollTop()  >= homeTop && $(this).scrollTop() < homeHeight) {
+        $("#homeButton").css("color", "#3bba9c")
+      }else{
+        $("#homeButton").css("color", "white")
+      }
+      if ( $(this).scrollTop()  >= experienceTop && $(this).scrollTop() < experienceHeight) {
+        $("#experienceButton").css("color", "#3bba9c")
+      }else{
+        $("#experienceButton").css("color", "white")
+      }
+      if ( $(this).scrollTop()  >= educationTop && $(this).scrollTop() < educationHeight) {
+        $("#educationButton").css("color", "#3bba9c")
+      }else{
+        $("#educationButton").css("color", "white")
+      }
+      if ( $(this).scrollTop()  >= skillTop && $(this).scrollTop() < skillHeight) {
+        $("#skillButton").css("color", "#3bba9c")
+      }else{
+        $("#skillButton").css("color", "white")
+      }
+      if ( $(this).scrollTop()  >= galleryTop && $(this).scrollTop() < galleryHeight) {
+        $("#galleryButton").css("color", "#3bba9c")
+      }else{
+        $("#galleryButton").css("color", "white")
+      }
+      if ( $(this).scrollTop()  >= otherTop && $(this).scrollTop() < otherHeight) {
+        $("#otherButton").css("color", "#3bba9c")
+      }else{
+        $("#otherButton").css("color", "white")
+      }
+    });
   }
 }
 </script>
@@ -321,7 +366,7 @@ export default {
     height: 4.5em;
     width: auto;
     cursor: pointer;
-    margin-left: 2em;
+    margin-left: 1.5em;
     display: flex;
     align-items: center;
   }

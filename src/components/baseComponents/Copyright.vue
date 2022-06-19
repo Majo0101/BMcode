@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="copyright">
     <div class="textField"
          style="
          text-align: center;
