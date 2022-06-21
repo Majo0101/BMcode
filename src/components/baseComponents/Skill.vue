@@ -1,167 +1,184 @@
 <template>
-<section id="skill"><br><br>
-  <div class="textField">
-    <div class="title">
-      <p>
-        {{ t('skillTitle') }}
-      </p>
-    </div>
-  </div>
-  <div>
-    <div class="textField">
-      <div class="subTitle">
-        <p>
-          {{ t('skillSub') }}
-        </p>
-      </div>
-    </div>
-  </div><br><br>
-  <div class="textField">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 4em;"></div>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>HTML</p>
-              <p>CSS</p>
-            </div>
-          </div>
-        </div>
-        <div class="textQuickW" style="width: 80%">
+  <waypoint @change="Run">
+    <section id="skill"><br><br>
+      <div class="textField">
+        <div class="title">
           <p>
-            {{ t('skillBar1') }}
+            {{ t('skillTitle') }}
           </p>
         </div>
-        <br>
       </div>
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 2.5em;"></div>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>JQ</p>
-              <p>JS</p>
-            </div>
+      <div>
+        <div class="textField">
+          <div class="subTitle">
+            <p>
+              {{ t('skillSub') }}
+            </p>
           </div>
         </div>
-        <div class="textQuickW" style="width: 80%">
-          <p>
-            {{ t('skillBar2') }}
-          </p>
-        </div>
-        <br>
-      </div>
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 3.5em;"></div>
+      </div><br><br>
+      <div class="textField">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{one : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+              </div>
             </div>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar1') }}
+              </p>
+            </div>
+            <br>
           </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>C</p>
-              <p>C++</p>
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{two : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>JQ</p>
+                  <p>JS</p>
+                </div>
+              </div>
             </div>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar2') }}
+              </p>
+            </div>
+            <br>
           </div>
-        </div>
-        <div class="textQuickW" style="width: 80%">
-          <p>
-            {{ t('skillBar3') }}
-          </p>
-        </div>
-        <br>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 2em;"></div>
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{three : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>C</p>
+                  <p>C++</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>Python</p>
-              <p>Django</p>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar3') }}
+              </p>
             </div>
-          </div>
-        </div>
-        <div class="textQuickW" style="width: 80%">
-          <p>
-            {{ t('skillBar4') }}
-          </p>
-        </div>
-        <br>
-      </div>
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 4em;"></div>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>Siemens</p>
-              <p>LOGO</p>
-            </div>
-          </div>
-        </div>
-        <div class="textQuickW" style="width: 80%">
-          <p>
-            {{ t('skillBar5') }}
-          </p>
-        </div>
-        <br>
-      </div>
-      <div class="col-md-4">
-        <div class="rowRepair">
-          <div class="col-1">
-            <div class="bar">
-              <div class="barLevel" style="height: 2em;"></div>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickWBolder">
-              <p>MYSQL</p>
-              <p>JAVA</p>
-            </div>
+            <br>
           </div>
         </div>
-        <div class="textQuickW" style="width: 80%">
-          <p>
-            {{ t('skillBar6') }}
-          </p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{four : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>Python</p>
+                  <p>PHP</p>
+                </div>
+              </div>
+            </div>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar4') }}
+              </p>
+            </div>
+            <br>
+          </div>
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{five : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>Siemens</p>
+                  <p>LOGO</p>
+                </div>
+              </div>
+            </div>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar5') }}
+              </p>
+            </div>
+            <br>
+          </div>
+          <div class="col-md-4">
+            <div class="rowRepair">
+              <div class="col-1">
+                <div class="bar">
+                  <div class="barLevel" :class="{six : animStart}"></div>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickWBolder">
+                  <p>MYSQL</p>
+                  <p>JAVA</p>
+                </div>
+              </div>
+            </div>
+            <div class="textQuickW" style="width: 80%">
+              <p>
+                {{ t('skillBar6') }}
+              </p>
+            </div>
+            <br>
+          </div>
         </div>
-        <br>
-      </div>
-    </div>
-  </div><br><br>
-</section>
+      </div><br><br>
+    </section>
+  </waypoint>
 </template>
 
 <script>
 import {useI18n} from "vue-i18n";
+import { Waypoint } from 'vue-waypoint'
 
 export default {
   name: "Skill",
+  components:{
+    Waypoint
+  },
+
+  data(){
+    return{
+      animStart: false
+    }
+  },
 
   setup() {
     const { t } = useI18n({inheritLocale: true,})
     return { t }
   },
 
+  methods:{
+    Run: function (waypointState){
+      this.animStart = waypointState.going === 'IN';
+    }
+  }
 }
 </script>
 
@@ -191,6 +208,61 @@ section{
   flex-direction: row;
   width: 100%;
 }
+
+.one{
+  animation: animOne 2s ease-out forwards;
+}
+
+@keyframes animOne {
+  0%{height: 0}
+  100%{height: 3.64em}
+}
+
+.two{
+  animation: animTwo 2s ease-out forwards;
+}
+
+@keyframes animTwo {
+  0%{height: 0}
+  100%{height: 3.12em}
+}
+
+.three{
+  animation: animThree 2s ease-out forwards;
+}
+
+@keyframes animThree {
+  0%{height: 0}
+  100%{height: 4.16em}
+}
+
+.four{
+  animation: animFour 2s ease-out forwards;
+}
+
+@keyframes animFour {
+  0%{height: 0}
+  100%{height: 2.08em}
+}
+
+.five{
+  animation: animFive 2s ease-out forwards;
+}
+
+@keyframes animFive {
+  0%{height: 0}
+  100%{height: 4.16em}
+}
+
+.six{
+  animation: animSix 2s ease-out forwards;
+}
+
+@keyframes animSix {
+  0%{height: 0}
+  100%{height: 2.34em}
+}
+
 </style>
 
 <i18n>
@@ -201,7 +273,7 @@ section{
     "skillBar1": "Táto stránka odzrkadľuje môj level v čase jej programovania.",
     "skillBar2": "Rozširovanie funkčnosti webstránok a webové aplikácie.",
     "skillBar3": "Schopnosť navrhnúť a vyrobiť funkčné embedded zariadenia.",
-    "skillBar4": "Aktuálne sa venujem aj Djnago frameworku spolu s Pythonom.",
+    "skillBar4": "Malé appky. BMcode využíva PHP mail() a kontroluje Captcha.",
     "skillBar5": "Výroba ovládania na mieru spolu s elektrickou časťou.",
     "skillBar6": "Teoretické vedomosti a jednoduché aplikácie."
   },
@@ -211,7 +283,7 @@ section{
     "skillBar1": "This page reflects my level at the time of its programming.",
     "skillBar2": "Extending the functionality of websites and web applications.",
     "skillBar3": "Ability to design and manufacture functional embedded devices.",
-    "skillBar4": "I am currently working on the Djnago framework together with Python.",
+    "skillBar4": "Small apps. BMcode uses PHP mail () and checks Captcha.",
     "skillBar5": "Production of custom controls together with the electrical part.",
     "skillBar6": "Theoretical knowledge and simple applications."
   }

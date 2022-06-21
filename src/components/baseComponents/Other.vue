@@ -1,175 +1,193 @@
 <template>
-<section id="other"><br><br>
-  <div class="textField">
-    <div class="title">
-      <p>
-        {{ t('otherTitle') }}
-      </p>
-    </div>
-  </div>
-  <div class="textField">
-    <div class="subTitle">
-      <p>
-        {{ t('otherSub') }}
-      </p>
-    </div>
-  </div><br><br>
-  <div class="textField">
-    <div class="textQuickWBolder">
-      <p>
-        {{ t('otherLang') }}
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-2">
-            <div class="textMontG">
-              <p style="writing-mode: vertical-lr;">
-                ENGLISH
-              </p>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickW">
-              <p style="font-weight: bolder">
-                {{ t('otherEN') }}
-              </p>
-            </div>
-            <div class="barHorizontal">
-              <div class="barHorizontalLevel" style="width: 70%"></div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-2">
-            <div class="textMontG">
-              <p style="writing-mode: vertical-lr">
-                SLOVAK
-              </p>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickW">
-              <p style="font-weight: bolder">
-                {{ t('otherSK') }}
-              </p>
-            </div>
-            <div class="barHorizontal">
-              <div class="barHorizontalLevel" style="width: 95%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="textQuickWBolder">
-      <p>
-        {{ t('otherCertificate') }}
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row"  id="licenceTitle">
-          <div class="col-2">
-            <div class="textMontG">
-              <p style="writing-mode: vertical-lr">
-                2021
-              </p>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickW">
-              <p style="font-weight: bolder">
-                {{ t('otherCerTitle1') }}
-              </p>
-            </div>
-            <div class="textQuickG">
-              <p>
-                {{ t('otherCerSub1') }}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="textQuickW" id="licence">
-            <p>
-              {{ t('otherCerText1') }}
-            </p>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="col-md-6">
-        <div class="row" id="driverTitle">
-          <div class="col-2">
-            <div class="textMontG">
-              <p style="writing-mode: vertical-lr;">2010</p>
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="textQuickW">
-              <p style="font-weight: bolder">
-                {{ t('otherCerTitle2') }}
-              </p>
-            </div>
-            <div class="textQuickG">
-              <p>
-                {{ t('otherCerSub2') }}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="textQuickW" id="driverLicence">
-            <p style="font-size: 150%">
-              <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em">A</span>
-              <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">B</span>
-              <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">C</span>
-              <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">T</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br><br>
-    <div class="textQuickWBolder">
-      <p>
-        {{ t('otherHobby') }}
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-2">
-        <div class="textMontG">
-          <p style="writing-mode: vertical-rl;">
-            {{ t('otherHobbyTitle') }}
-          </p>
-        </div>
-      </div>
-      <div class="col-10" id="colRepair">
-        <div class="textQuickW">
+  <waypoint @change="Run">
+    <section id="other"><br><br>
+      <div class="textField">
+        <div class="title">
           <p>
-            {{ t('otherHobbyText') }}
+            {{ t('otherTitle') }}
           </p>
         </div>
       </div>
-    </div>
-  </div><br><br><br>
-</section>
+      <div class="textField">
+        <div class="subTitle">
+          <p>
+            {{ t('otherSub') }}
+          </p>
+        </div>
+      </div><br><br>
+      <div class="textField">
+        <div class="textQuickWBolder">
+          <p>
+            {{ t('otherLang') }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-2">
+                <div class="textMontG">
+                  <p style="writing-mode: vertical-lr;">
+                    ENGLISH
+                  </p>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickW">
+                  <p style="font-weight: bolder">
+                    {{ t('otherEN') }}
+                  </p>
+                </div>
+                <div class="barHorizontal">
+                  <div class="barHorizontalLevel" :class="{one : animStart}"></div>
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-2">
+                <div class="textMontG">
+                  <p style="writing-mode: vertical-lr">
+                    SLOVAK
+                  </p>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickW">
+                  <p style="font-weight: bolder">
+                    {{ t('otherSK') }}
+                  </p>
+                </div>
+                <div class="barHorizontal">
+                  <div class="barHorizontalLevel" :class="{two : animStart}"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="textQuickWBolder">
+          <p>
+            {{ t('otherCertificate') }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row"  id="licenceTitle">
+              <div class="col-2">
+                <div class="textMontG">
+                  <p style="writing-mode: vertical-lr">
+                    2021
+                  </p>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickW">
+                  <p style="font-weight: bolder">
+                    {{ t('otherCerTitle1') }}
+                  </p>
+                </div>
+                <div class="textQuickG">
+                  <p>
+                    {{ t('otherCerSub1') }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="textQuickW" id="licence">
+                <p>
+                  {{ t('otherCerText1') }}
+                </p>
+              </div>
+            </div>
+            <br>
+          </div>
+          <div class="col-md-6">
+            <div class="row" id="driverTitle">
+              <div class="col-2">
+                <div class="textMontG">
+                  <p style="writing-mode: vertical-lr;">2010</p>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="textQuickW">
+                  <p style="font-weight: bolder">
+                    {{ t('otherCerTitle2') }}
+                  </p>
+                </div>
+                <div class="textQuickG">
+                  <p>
+                    {{ t('otherCerSub2') }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="textQuickW" id="driverLicence">
+                <p style="font-size: 150%">
+                  <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em">A</span>
+                  <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">B</span>
+                  <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">C</span>
+                  <span style="background-color: #3bba9c; border-radius: 500px; padding: 0 0.4em; margin-left: 0.5em ">T</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="textQuickWBolder">
+          <p>
+            {{ t('otherHobby') }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="textMontG">
+              <p style="writing-mode: vertical-rl;">
+                {{ t('otherHobbyTitle') }}
+              </p>
+            </div>
+          </div>
+          <div class="col-10" id="colRepair">
+            <div class="textQuickW">
+              <p>
+                {{ t('otherHobbyText') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><br><br><br>
+    </section>
+  </waypoint>
 </template>
 
 <script>
 import {useI18n} from "vue-i18n";
+import { Waypoint } from 'vue-waypoint';
 
 export default {
   name: "Other",
+  components:{
+    Waypoint
+  },
+
+  data(){
+    return{
+      animStart: false,
+    }
+  },
 
   setup() {
     const { t } = useI18n({inheritLocale: true,})
     return { t }
+  },
+
+  methods:{
+    Run: function (waypointState){
+      this.animStart = waypointState.going === 'IN';
+    }
   },
 
   mounted() {
@@ -192,7 +210,7 @@ section{
 }
 
 .barHorizontal{
-  width: 100%;
+  width: 12em;
   position: relative;
   height: 0.5rem;
   background-color: #808080;
@@ -211,9 +229,26 @@ section{
   margin-left: 2.5em;
 }
 
-
 #colRepair{
   margin-left: -8.333333%;
+}
+
+.one{
+  animation: animOne 1.5s ease-out forwards;
+}
+
+@keyframes animOne {
+  0%{width: 0}
+  100%{width: 7em}
+}
+
+.two{
+  animation: animTwo 1.5s ease-out forwards;
+}
+
+@keyframes animTwo {
+  0%{width: 0}
+  100%{width: 11em}
 }
 
 @media only screen and (min-width: 281px) and (max-width: 560px){

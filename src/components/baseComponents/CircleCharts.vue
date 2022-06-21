@@ -1,4 +1,5 @@
 <template>
+  <waypoint @change="Run">
   <section id="circleChart"><br><br>
       <div class="textField">
         <div class="title">
@@ -41,7 +42,7 @@
               <div class="baseChart">
                 <div class="level" :class="{ circleTwo : animStart }">
                   <div class="coverChart">
-                    <div class="textQuickW" @click="Type()">
+                    <div class="textQuickW">
                       --angle
                     </div>
                   </div>
@@ -79,13 +80,18 @@
         </div>
       </div><br><br>
   </section>
+  </waypoint>
 </template>
 
 <script>
 import {useI18n} from "vue-i18n";
+import { Waypoint } from 'vue-waypoint'
 
 export default {
   name: "CircleCharts",
+  components:{
+    Waypoint
+  },
 
   created() {
     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) !== -1 ) {this.browser = "opera";}
@@ -96,7 +102,7 @@ export default {
     else {this.browser = "none";}
 
 
-  },
+      },
 
   data(){
     return{
@@ -106,17 +112,15 @@ export default {
   },
 
   methods:{
-    Type: function () {
-      this.animStart = true;
+    Run: function (waypointState){
+      this.animStart = waypointState.going === 'IN';
     }
-
-
   },
 
   setup() {
     const { t } = useI18n({inheritLocale: true,})
     return { t }
-  },
+  }
 }
 </script>
 

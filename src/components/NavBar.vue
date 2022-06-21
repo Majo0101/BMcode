@@ -69,7 +69,7 @@
         <span id="character1" style="--i:1">{{ t('lang1') }}</span>
         <span id="character2" style="--i:2">{{ t('lang2') }}</span>
       </div>
-      <a href="./public/CV.pdf" download="CV_SK/EN" style="text-decoration: none;">
+      <a href="/CV.pdf" download="CV_SK/EN" style="text-decoration: none;">
         <div class="navButton" id="download">
           <span style="--i:1">{{ t('down1') }}</span>
           <span style="--i:2">{{ t('down2') }}</span>
@@ -225,7 +225,8 @@ export default {
     let educationTop = $('#education').offset().top - value() - 10;
     let educationHeight = $('#education').height() + educationTop;
     let skillTop = $('#skill').offset().top - value() - 10;
-    let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
+    let skillHeight = $('#skill').height() + skillTop;
+    // let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
     let galleryTop = $('#gallery').offset().top - value() - 10;
     let galleryHeight = $('#gallery').height() + galleryTop;
     let otherTop = $('#game').offset().top - value() - 10;
