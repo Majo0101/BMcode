@@ -1,5 +1,4 @@
 <template>
-  <waypoint @change="Run">
     <section id="other"><br><br>
       <div class="textField">
         <div class="title">
@@ -15,6 +14,7 @@
           </p>
         </div>
       </div><br><br>
+      <waypoint @change="Run">
       <div class="textField">
         <div class="textQuickWBolder">
           <p>
@@ -38,7 +38,7 @@
                   </p>
                 </div>
                 <div class="barHorizontal">
-                  <div class="barHorizontalLevel" :class="{one : animStart}"></div>
+                  <div class="barHorizontalLevel" :class="{one : animStart}"><div class="lol"></div></div>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
                   </p>
                 </div>
                 <div class="barHorizontal">
-                  <div class="barHorizontalLevel" :class="{two : animStart}"></div>
+                  <div class="barHorizontalLevel" :class="{two : animStart}"><div class="lol"></div></div>
                 </div>
               </div>
             </div>
@@ -159,8 +159,8 @@
           </div>
         </div>
       </div><br><br><br>
+      </waypoint>
     </section>
-  </waypoint>
 </template>
 
 <script>
@@ -231,6 +231,14 @@ section{
 
 #colRepair{
   margin-left: -8.333333%;
+}
+
+.lol{
+  position: absolute;
+  height: 0.5em;
+  border-left: 2px solid white;
+  right: 0;
+  bottom: -0.7em;
 }
 
 .one{

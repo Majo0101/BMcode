@@ -219,17 +219,17 @@ export default {
     });
 
     let homeTop = $('#home').offset().top;
-    let homeHeight = $('#home').height() + $('#aboutMeDiv').height() - value() - 10;
-    let experienceTop = $('#experience').offset().top - value() - 10;
+    let homeHeight = $('#home').height() + $('#aboutMeDiv').height() - value() - 50;
+    let experienceTop = $('#experience').offset().top - value() - 50;
     let experienceHeight = $('#experience').height() + experienceTop;
-    let educationTop = $('#education').offset().top - value() - 10;
+    let educationTop = $('#education').offset().top - value() - 50;
     let educationHeight = $('#education').height() + educationTop;
-    let skillTop = $('#skill').offset().top - value() - 10;
-    let skillHeight = $('#skill').height() + skillTop;
-    // let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
-    let galleryTop = $('#gallery').offset().top - value() - 10;
+    let skillTop = $('#skill').offset().top - value() - 50;
+    // let skillHeight = $('#skill').height() + skillTop;
+    let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
+    let galleryTop = $('#gallery').offset().top - value() - 50;
     let galleryHeight = $('#gallery').height() + galleryTop;
-    let otherTop = $('#game').offset().top - value() - 10;
+    let otherTop = $('#game').offset().top - value() - 50;
     let otherHeight = $('#game').height() + otherTop + $('#other').height() + $('#contact').height();
     $(window).scroll(function() {
       if ( $(this).scrollTop()  >= homeTop && $(this).scrollTop() < homeHeight) {
