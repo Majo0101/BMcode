@@ -218,49 +218,54 @@ export default {
       }
     });
 
+    function widthAbsolute() {
+      return window.screen.width;
+    }
+
     let homeTop = $('#home').offset().top;
-    let homeHeight = $('#home').height() + $('#aboutMeDiv').height() - value() - 50;
-    let experienceTop = $('#experience').offset().top - value() - 50;
+    let homeHeight = $('#home').height() + $('#aboutMeDiv').height() - value() - 100;
+    let experienceTop = $('#experience').offset().top - value() - 100;
     let experienceHeight = $('#experience').height() + experienceTop;
-    let educationTop = $('#education').offset().top - value() - 50;
+    let educationTop = $('#education').offset().top - value() - 100;
     let educationHeight = $('#education').height() + educationTop;
-    let skillTop = $('#skill').offset().top - value() - 50;
-    // let skillHeight = $('#skill').height() + skillTop;
+    let skillTop = $('#skill').offset().top - value() - 100;
     let skillHeight = $('#skill').height() + skillTop + $('#circleChart').height();
-    let galleryTop = $('#gallery').offset().top - value() - 50;
+    let galleryTop = $('#gallery').offset().top - value() - 100;
     let galleryHeight = $('#gallery').height() + galleryTop;
-    let otherTop = $('#game').offset().top - value() - 50;
+    let otherTop = $('#game').offset().top - value() -100;
     let otherHeight = $('#game').height() + otherTop + $('#other').height() + $('#contact').height();
     $(window).scroll(function() {
-      if ( $(this).scrollTop()  >= homeTop && $(this).scrollTop() < homeHeight) {
-        $("#homeButton").css("color", "#3bba9c")
-      }else{
-        $("#homeButton").css("color", "white")
-      }
-      if ( $(this).scrollTop()  >= experienceTop && $(this).scrollTop() < experienceHeight) {
-        $("#experienceButton").css("color", "#3bba9c")
-      }else{
-        $("#experienceButton").css("color", "white")
-      }
-      if ( $(this).scrollTop()  >= educationTop && $(this).scrollTop() < educationHeight) {
-        $("#educationButton").css("color", "#3bba9c")
-      }else{
-        $("#educationButton").css("color", "white")
-      }
-      if ( $(this).scrollTop()  >= skillTop && $(this).scrollTop() < skillHeight) {
-        $("#skillButton").css("color", "#3bba9c")
-      }else{
-        $("#skillButton").css("color", "white")
-      }
-      if ( $(this).scrollTop()  >= galleryTop && $(this).scrollTop() < galleryHeight) {
-        $("#galleryButton").css("color", "#3bba9c")
-      }else{
-        $("#galleryButton").css("color", "white")
-      }
-      if ( $(this).scrollTop()  >= otherTop && $(this).scrollTop() < otherHeight) {
-        $("#otherButton").css("color", "#3bba9c")
-      }else{
-        $("#otherButton").css("color", "white")
+      if (widthAbsolute() > 1024){
+        if ( $(this).scrollTop()  >= homeTop && $(this).scrollTop() < homeHeight) {
+          $("#homeButton").css("color", "#3bba9c")
+        }else{
+          $("#homeButton").css("color", "white")
+        }
+        if ( $(this).scrollTop()  >= experienceTop && $(this).scrollTop() < experienceHeight) {
+          $("#experienceButton").css("color", "#3bba9c")
+        }else{
+          $("#experienceButton").css("color", "white")
+        }
+        if ( $(this).scrollTop()  >= educationTop && $(this).scrollTop() < educationHeight) {
+          $("#educationButton").css("color", "#3bba9c")
+        }else{
+          $("#educationButton").css("color", "white")
+        }
+        if ( $(this).scrollTop()  >= skillTop && $(this).scrollTop() < skillHeight) {
+          $("#skillButton").css("color", "#3bba9c")
+        }else{
+          $("#skillButton").css("color", "white")
+        }
+        if ( $(this).scrollTop()  >= galleryTop && $(this).scrollTop() < galleryHeight) {
+          $("#galleryButton").css("color", "#3bba9c")
+        }else{
+          $("#galleryButton").css("color", "white")
+        }
+        if ( $(this).scrollTop()  >= otherTop && $(this).scrollTop() < otherHeight) {
+          $("#otherButton").css("color", "#3bba9c")
+        }else{
+          $("#otherButton").css("color", "white")
+        }
       }
     });
   }
