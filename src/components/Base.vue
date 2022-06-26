@@ -55,6 +55,17 @@ export default {
   background-color: #3D4849;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
+  .baseContainer{
+    position: absolute;
+    height: auto;
+    right: 5em;
+    left: 35%;
+    top: 0;
+    background-color: #3D4849;
+  }
+}
+
 @media only screen and (min-width: 780px) and (max-width: 1023px){
   .baseContainer{
     position: absolute;

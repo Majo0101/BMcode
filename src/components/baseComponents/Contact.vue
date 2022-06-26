@@ -1,5 +1,7 @@
 <template>
-  <section id="contact"><br><br>
+  <section id="contact">
+    <div class="space"></div>
+    <div class="space"></div>
     <div class="textField">
       <div class="title">
         <p>
@@ -13,65 +15,82 @@
           {{ t('contactSub') }}
         </p>
       </div>
-    </div><br><br>
+    </div>
+    <div class="space"></div>
+    <div class="space"></div>
     <div class="textField">
       <div class="row">
+<!--    CONTENT LEFT-->
         <div class="col-md-6">
-          <div class="leftHeight">
+          <div class="contactFormDiv" id="leftCol">
             <form id="contact-form" name="contact-form" method="post" action="mail.php">
               <div class="form">
-                <label for="name">&nbsp;{{ t('contactFormName') }}&nbsp;<span
-                    style="color: #3bba9c;">_&nbsp;</span></label><br>
-                <input type="text" id="name" name="name" value=""><br>
-              </div><br>
-              <div class="form">
-                <label for="email">&nbsp;{{ t('contactFormEmail') }}&nbsp;<span style="color: #3bba9c">_&nbsp;</span></label><br>
-                <input type="text" id="email" name="email" value=""><br>
-              </div><br>
-              <div class="form">
-                <label id="labelMessage" for="message">&nbsp;{{ t('contactFormMess') }}&nbsp;<span style="color: #3bba9c">_&nbsp;</span></label><br>
-                <textarea id="message" name="message" maxlength="6000" placeholder=""></textarea>
-              </div><br>
-              <div class="form">
-                <label for="captcha">&nbsp;<span id="captchaLabel">{{ Captcha }}</span>&nbsp;<span
-                    style="color: #3bba9c;">_&nbsp;</span></label><br>
-                <input type="text" id="captcha" name="captcha" value=""><br>
+                <label for="name">&nbsp;{{ t('contactFormName') }}&nbsp;<span style="color: #3bba9c;">_&nbsp;</span></label>
+                <div class="space"></div>
+                <input type="text" id="name" name="name">
               </div>
-            </form><br><br>
+              <div class="space"></div>
+              <div class="form">
+                <label for="email">&nbsp;{{ t('contactFormEmail') }}&nbsp;<span style="color: #3bba9c">_&nbsp;</span></label>
+                <div class="space"></div>
+                <input type="text" id="email" name="email">
+                <div class="space"></div>
+              </div>
+
+              <div class="form">
+                <label id="labelMessage" for="message">&nbsp;{{ t('contactFormMess') }}&nbsp;<span style="color: #3bba9c">_&nbsp;</span></label>
+                <div class="space"></div>
+                <textarea id="message" name="message" maxlength="6000" placeholder=""></textarea>
+              </div>
+              <div class="space"></div>
+              <div class="form">
+                <label for="captcha">&nbsp;<span id="captchaLabel">{{ Captcha }}</span>&nbsp;<span style="color: #3bba9c;">_&nbsp;</span></label>
+                <div class="space"></div>
+                <input type="text" id="captcha" name="captcha" value="">
+                <div class="space"></div>
+              </div>
+            </form>
+            <div class="space"></div>
+            <div class="space"></div>
             <div class="submit">
               <button id="submit" type="submit" value="submit" @click="Check()" >{{ t('contactFormSubmit') }}</button>
             </div>
-          </div><br><br>
+          </div>
+          <div class="space"></div>
+          <div class="space"></div>
         </div>
-        <div class="col-md-6"><br>
-            <div class="textField" id="contactText"><br>
+<!--        CONTENT RIGHT-->
+        <div class="col-md-6">
+          <div class="space"></div>
+          <div class="contactInfoDiv" id="rightCol">
+            <div class="textField"><br>
               <div class="textMontW">
-                <p style="font-size: 150%">Marian Bodnar</p>
+                <p style="font-size: 150%">Marián Bodnár</p>
               </div>
               <div class="textMontG">
                 <p>BMCODE</p>
               </div>
               <br>
               <div class="textQuickW">
-                <p><span class="textQuickG" id="vek">{{ t('contactAge') }}</span>&nbsp;&nbsp;&nbsp;31</p>
-                <p><span class="textQuickG">{{ t('contactResident') }}</span>&nbsp;&nbsp;&nbsp;Slovensko</p>
-                <p><span class="textQuickG">Freelance:</span>&nbsp;&nbsp;&nbsp;yes</p>
-                <p><span class="textQuickG">{{ t('contactAddress') }}</span>&nbsp;&nbsp;&nbsp;Bratislava V</p>
-                <p><span class="textQuickG">{{ t('contactPhone') }}</span>&nbsp;&nbsp;&nbsp;+421 950 596 214</p>
-                <p style="word-break: break-all"><span class="textQuickG">Email:</span>&nbsp;&nbsp;&nbsp;bodnar.marian@bmcode.sk</p>
+                <p><span class="textQuickG">{{ t('contactAge') }}</span> {{ t('contactAgeAns') }}</p>
+                <p><span class="textQuickG">{{ t('contactResident') }}</span> {{ t('contactResidentAns') }}</p>
+                <p><span class="textQuickG">Freelance: </span>yes</p>
+                <p><span class="textQuickG">{{ t('contactAddress') }} </span> Bratislava V</p>
+                <p><span class="textQuickG">{{ t('contactPhone') }} </span> +421950596214</p>
+                <p><span class="textQuickG">Email: </span>bodnar.marian@bmcode.sk</p>
               </div>
-              <br>
-              <div class="textField" style="justify-content: center; width: 100%">
-                <div class="signature">
-                  <img src="../../assets/brandSignature.png" alt="signature" style="width: 90%">
-                </div>
-              </div>
-              <br>
+              <div class="space"></div>
             </div>
+            <div class="signature">
+              <img src="../../assets/brandSignature.png" alt="signature">
+            </div>
+          </div>
         </div>
       </div>
+      <div class="space"></div>
+      <div class="space"></div>
     </div>
-    <br><br>
+<!--    CONTENT END-->
   </section>
 </template>
 
@@ -80,6 +99,11 @@ import {useI18n} from "vue-i18n";
 
 export default {
   name: "Contact",
+
+  created() {
+    document.addEventListener("DOMContentLoaded", this.WindowResize);
+    window.addEventListener('resize', this.WindowResize);
+  },
 
   data(){
     return{
@@ -189,17 +213,22 @@ export default {
           }
         }
       });
+    },
+
+    WindowResize: function() {
+      let heightDiv = document.querySelector('#leftCol').offsetHeight;
+      let heightSpace = document.querySelector('.space').offsetHeight;
+      if (screen.width > 767){
+        document.getElementById("rightCol").style.height = (heightDiv - heightSpace) + "px";
+      }else{
+        document.getElementById("rightCol").style.height = "auto";
+      }
     }
   },
 
-  mounted() {
-    $(document).ready(function() {
-      $("#contactText").css("height", ($(".leftHeight").height() - 21));
-    });
-
-    $(window).resize(function () {
-      $("#contactText").css("height", ($(".leftHeight").height() - 21));
-    });
+  destroyed() {
+    document.removeEventListener("DOMContentLoaded", this.WindowResize);
+    window.removeEventListener('resize', this.WindowResize);
   }
 }
 </script>
@@ -295,10 +324,18 @@ input[type=text]:focus{
 
 .signature{
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#contactText{
+.signature > img{
+  max-width: 90%;
+  height: 30%;
+}
+
+#rightCol{
   border-radius: 50px;
   border: 1px solid #808080;
   width: 90%;
@@ -306,7 +343,7 @@ input[type=text]:focus{
   padding: 0.8em;
 }
 
-.leftHeight{
+.contactFormDiv{
   height: auto;
 }
 </style>
@@ -321,7 +358,9 @@ input[type=text]:focus{
     "contactFormMess": "Správa:",
     "contactFormSubmit": "ODOSLAŤ",
     "contactAge": "Vek:",
+    "contactAgeAns": "31",
     "contactResident": "Rezident:",
+    "contactResidentAns": "Slovensko",
     "contactAddress": "Adresa:",
     "contactPhone": "Telefón:"
   },
@@ -333,7 +372,9 @@ input[type=text]:focus{
     "contactFormMess": "Message:",
     "contactFormSubmit": "SEND",
     "contactAge": "Age:",
+    "contactAgeAns": "31",
     "contactResident": "Resident:",
+    "contactResidentAns": "Slovak",
     "contactAddress": "Address:",
     "contactPhone": "Phone:"
   }

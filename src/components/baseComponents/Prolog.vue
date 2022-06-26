@@ -311,7 +311,7 @@ section{
 <i18n>
 {
   "sk": {
-    "prolog": "Ahoj! Moje meno je Marián Bodnár a BMcode je aktuálne môj životopis. Z pracovných skúseností nebude jasné prečo vlastním tento web. Môže za to fakt, že sa neustále vzdelávam a robím čo ma baví.",
+    "prolog": "Ahoj! Moje meno je Marián Bodnár a BMcode je aktuálne môj životopis. Z pracovných skúseností nebude jasné, prečo vlastním tento web. Môže za to fakt, že sa neustále vzdelávam a robím, čo ma baví.",
     "contactBtn": "KONTAKT",
     "aboutMeBtn": "O MNE"
 

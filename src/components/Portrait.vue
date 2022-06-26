@@ -28,6 +28,18 @@ export default {
   background-position: center top;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1280px){
+  .photo{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
 @media only screen and (min-width: 780px) and (max-width: 1023px){
   .photo{
     position: absolute;

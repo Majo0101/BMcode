@@ -9,7 +9,7 @@
       <div class="textQuickW">
         <p style="
         font-size: 130%;
-        color: #808080">© 2022 Copyright: Marian Bodnar v1.0</p>
+        color: #808080">© 2022 Copyright: Marián Bodnár v1.0</p>
       </div>
     </div>
   </section>

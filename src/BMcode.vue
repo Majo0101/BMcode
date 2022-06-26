@@ -42,6 +42,11 @@ body{
   background-color: #3D4849;
 }
 
+.space{
+  height: 21px;
+  width: 100%;
+}
+
 .textQuickW{
   color: white;
   font-family: 'Quicksand', sans-serif;
@@ -106,10 +111,10 @@ body{
 
 .textField{
   margin-left: 5%;
-  width: 70%;
+  width: 78%;
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1536px){
+@media only screen and (min-width: 1281px) and (max-width: 1600px){
 
   .textField{
     margin-left: 5%;
@@ -120,7 +125,7 @@ body{
 @media only screen and (min-width: 1024px) and (max-width: 1280px){
   .textField{
     margin-left: 3%;
-    width: 90%;
+    width: 94%;
   }
 }
 
@@ -140,8 +145,8 @@ body{
 
 @media only screen and (max-width: 560px){
   .textField{
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 3%;
+    width: 94%;
   }
 }
 </style>

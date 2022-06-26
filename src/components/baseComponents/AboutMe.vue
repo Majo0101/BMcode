@@ -170,7 +170,7 @@ section{
   "sk": {
     "aboutMeTitle": "O MNE",
     "aboutMeSub": "MÔJ PRÍBEH",
-    "aboutMeText1": "Od základnej školy sa venujem elektrotechnike a prvý program ktorý som napísal bol určený pre mikrokontrolér PIC16F84. Po strednej škole som trochu cestoval, neskôr som sa usadil v rodnom meste a začal som pracovať ako elektrikár. Po piatich rokoch som vedel, že stereotyp v malom meste ma nebaví a zamestnal som sa ako servisný technik. Nové technológie ku ktorým som mal prístup ako technik ma prinútili zamyslieť sa nad tým čo vlastne chcem robiť. V roku 2021 som začal študovať na Fakulte informatiky PEVŠ v Bratislave. Mojím definitívnym cieľom je vypracovať sa na full-stack developera, pretože v IT sektore je vždy možnosť sa vzdelávať.",
+    "aboutMeText1": "Od základnej školy sa venujem elektrotechnike a prvý program, ktorý som napísal, bol určený pre mikrokontrolér PIC16F84. Po strednej škole som trochu cestoval, neskôr som sa usadil v rodnom meste a začal som pracovať ako elektrikár. Po piatich rokoch som vedel, že stereotyp v malom meste ma nebaví a zamestnal som sa ako servisný technik. Nové technológie, ku ktorým som mal prístup ako technik, ma prinútili zamyslieť sa nad tým, čo vlastne chcem robiť. V roku 2021 som začal študovať na Fakulte informatiky PEVŠ v Bratislave. Mojím definitívnym cieľom je vypracovať sa na full-stack developera, pretože v IT sektore je vždy možnosť sa vzdelávať.",
     "aboutMeText2": "Táto webová stránka bola vytvorená vo frameworku Vue.js(Vite) pomocou komponentov. Využíva upravený Boostrap grid systém, plugin n18i, JQuery a Vanilla JS.",
     "aboutMeAge": "VEK:",
     "aboutMeAddress": "ADRESA:",

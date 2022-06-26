@@ -249,8 +249,8 @@ export default {
 
   },
   "en": {
-    "firstName": "MARIAN",
-    "lastName": "BODNAR"
+    "firstName": "MARIÁN",
+    "lastName": "BODNÁR"
   }
 }
 </i18n>
