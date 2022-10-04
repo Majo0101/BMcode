@@ -75,7 +75,7 @@ export default {
     padding-bottom: 5vh;
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 35%;
     z-index: 1;
   }
 

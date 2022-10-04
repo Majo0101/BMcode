@@ -137,7 +137,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 560px){
+@media only screen and (min-width: 281px) and (max-width: 560px){
   .linkBar{
     position: absolute;
     top: 36em;
@@ -168,6 +168,41 @@ export default {
     padding: 0.7em;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 280px){
+  .linkBar{
+    position: absolute;
+    top: 36em;
+    right: 0;
+    left: 0;
+    bottom: unset;
+    width: 100%;
+    background-color: #3D4849;
+    border-left: none;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    height: 4.5em;
+    justify-content: center;
+  }
+
+  .logos{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo{
+    display: flex;
+    border-radius: 50px;
+    border: 1px solid #808080;
+    padding: 0.7em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
     margin-bottom: 0;
   }
 }

@@ -111,10 +111,8 @@
             </div>
           </div><br>
           <div class="row">
-            <div class="textMontW" style="border-left: 1px solid white; padding-left: 0.5em">
-              <h1>
-                {{ t('experienceText3') }}
-              </h1>
+            <div class="textQuickW" style="border-left: 1px solid white; padding-left: 0.5em">
+              {{ t('experienceText3') }}
             </div>
           </div>
         </div>
@@ -398,26 +396,26 @@ section{
     "experiencePlace2": "Revúca",
     "experiencePosition2": "Servisný technik",
     "experienceText2": "Servis Bioplynové stanice (Agrikomp technológia). Stavby technologických rozvádzačov, ovládania na mieru, výmena výkonových súčastí (do 1000V) a diagnostika porúch(merania atď.) Znalosť PLC Beckhoff, Siemens, Wago. Opravy rôznych technológií výťahy, kogeneračné jednotky, štiepkové kotle atď. Prekládka VN/NN vedení a kioskov. Revízie a prehliadky. Čítanie schém a výkresov samozrejmosťou. Manažment.",
-    "experienceJob3": "Názov firmy",
-    "experiencePlace3": "BA a okolie",
-    "experiencePosition3": "Frontend-Backend & Development",
-    "experienceText3": "VOĽNÉ MIESTO"
+    "experienceJob3": "Západoslovenská distribučná a.s.",
+    "experiencePlace3": "Bratislava",
+    "experiencePosition3": "Technik správy merania",
+    "experienceText3": "Správa a úprava dát v systéme SAP, ISU/DM a EDM. Vytváranie a špecifikovanie zostavy pre štatistiku. Správa tímových IT systémov. Vyhľadávanie procesných anomálií. Príprava a aktualizácia pracovných postupov. Kooperácia v pracovnej skupine pri IT business projektoch. Automatizácia procesov pomocou MS RPA nástrojov."
   },
   "en": {
     "experienceTitle": "EXPERIENCE",
     "experienceSub": "I WORKED",
     "experienceJob1": "Freelance business",
     "experiencePlace1": "Revúca",
-    "experiencePosition1": "Electrician engineer",
+    "experiencePosition1": "Electrician Engineer",
     "experienceText1": "Residential and domestic electrical installations. Cabling according to drawing documentation or without it. Manufacture of residential and domestic switchboards with or without documentation. Repairs of various small faults and diagnostics. CCTV systems and LAN home network installation and startup. PC repair, PC removal, Win installation, Linux, etc.",
     "experienceJob2": "Elektro Baláž",
     "experiencePlace2": "Revúca",
     "experiencePosition2": "Service Technician",
     "experienceText2": "Biogas plant service (Agrikomp technology). Construction of technological switchboards, custom control, replacement of power components (Max 1000V) and fault diagnostics (measurements, etc.). Knowledge of PLC Beckhoff, Siemens, Wago. Repairs of various technologies like elevators, cranes, cogeneration units, boilers, etc. Transhipment of HV / LV lines and kiosks. Revisions and inspections. Reading drawings and diagrams of course. Management of employees. A complete automatization solutions.",
-    "experienceJob3": "Company",
-    "experiencePlace3": "Anywhere",
-    "experiencePosition3": "Frontend-Backend & Development",
-    "experienceText3": "FREE PLACE"
+    "experienceJob3": "Západoslovenská distribučná a.s.",
+    "experiencePlace3": "Bratislava",
+    "experiencePosition3": "Measurement Management Technician",
+    "experienceText3": "Management and editing of data in the SAP system, ISU/DM and EDM. Creating and specifying a report for statistics. Management of team IT systems. Searching for process anomalies. Preparation and updating of work procedures. Cooperation in the working group for IT business projects. Process automation using MS RPA tools."
   }
 }
 </i18n>

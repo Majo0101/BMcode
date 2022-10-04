@@ -143,10 +143,25 @@ body{
   }
 }
 
-@media only screen and (max-width: 560px){
+@media only screen and (min-width: 281px) and (max-width: 560px){
+  .textField{
+    margin-left: 5%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 280px){
   .textField{
     margin-left: 3%;
     width: 94%;
   }
+
+  .title{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+  }
 }
+
+
 </style>

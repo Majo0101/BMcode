@@ -372,7 +372,7 @@ export default {
     height: 4.5em;
     width: auto;
     cursor: pointer;
-    margin-left: 1.5em;
+    margin-left: 1em;
     display: flex;
     align-items: center;
   }
@@ -518,10 +518,6 @@ export default {
     "down6": "N",
     "down7": "U",
     "down8": "Ť"
-
-
-
-
   },
   "en": {
     "home1": "H",
