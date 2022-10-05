@@ -1,10 +1,8 @@
 <template>
   <div class="nav">
-    <a href="../../index.html">
-      <div class="brandLogo">
-        <img src="../assets/brand.png" alt="brandLogo">
-      </div>
-    </a>
+    <div class="brandLogo" @click="ReloadPage">
+      <img src="../assets/brand.png" alt="brandLogo">
+    </div>
     <div class="rollButton">
       <img src="../assets/expand.svg" alt="roll" id="openClose">
     </div>
@@ -111,6 +109,9 @@ export default {
     ChangeSK: function (){
       setTimeout(() => this.locale = 'sk', 500);
       this.toggle = !this.toggle;
+    },
+    ReloadPage: function (){
+      location.reload();
     }
   },
   mounted() {
