@@ -84,7 +84,7 @@
             <div class="col-md-auto">
               <div class="textQuickW">
                 <p>
-                  bodnar.marian@bmcode.sk
+                  bodnar.marian@gmail.com
                 </p>
               </div>
             </div>

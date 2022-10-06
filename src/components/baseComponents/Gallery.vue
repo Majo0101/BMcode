@@ -2,10 +2,10 @@
   <section id="gallery"><br><br>
     <div class="galleryPlate">
       <div id="close"><img src="../../assets/galleryX.svg" alt="Close"></div>
-      <div class="photoArea">
-        <img src="../../assets/1.jpg" id="invisible" alt="Invisible">
-        <div id="left"><img src="../../assets/galleryLeft.svg" alt="Left"></div>
-        <div id="right"><img src="../../assets/galleryRight.svg" alt="Right"></div>
+      <div class="photoArea" :style="{ backgroundImage: 'url(' + PhotoFrame[position][counter] + ')' }" :class="{fadeOut : DelaySwitch, fadeIn : !DelaySwitch}">
+        <img :src="PhotoFrame[position][counter]"  id="invisible" alt="Invisible">
+        <div id="left" @click="Left"><img src="../../assets/galleryLeft.svg" alt="Left"></div>
+        <div id="right" @click="Right"><img src="../../assets/galleryRight.svg" alt="Right"></div>
       </div>
     </div>
     <div class="textField">
@@ -25,7 +25,7 @@
     <div class="textField">
       <div class="row">
         <div class="col-md-6">
-          <div class="photoFrame" id="photoOne" :style="{ backgroundImage: 'url(' + imageA + ')' }">
+          <div class="photoFrame" id="photoOne" :style="{ backgroundImage: 'url(' + imageA + ')' }" @click="SetGallery(0)">
             <div class="clone"><img src="../../assets/galleryExpand.svg" alt="Expand">
             </div>
           </div>
@@ -35,7 +35,7 @@
           <br><br>
         </div>
         <div class="col-md-6">
-          <div class="photoFrame" id="photoTwo" :style="{ backgroundImage: 'url(' + imageB + ')' }">
+          <div class="photoFrame" id="photoTwo" :style="{ backgroundImage: 'url(' + imageB + ')' }" @click="SetGallery(1)">
             <div class="clone"><img src="../../assets/galleryExpand.svg" alt="Expand">
             </div>
           </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="photoFrame" id="photoThree" :style="{ backgroundImage: 'url(' + imageC + ')' }">
+          <div class="photoFrame" id="photoThree" :style="{ backgroundImage: 'url(' + imageC + ')' }" @click="SetGallery(2)">
             <div class="clone"><img src="../../assets/galleryExpand.svg" alt="Expand"></div>
           </div>
           <br>
@@ -56,7 +56,7 @@
           <br><br>
         </div>
         <div class="col-md-6">
-          <div class="photoFrame" id="photoFour" :style="{ backgroundImage: 'url(' + imageD + ')' }">
+          <div class="photoFrame" id="photoFour" :style="{ backgroundImage: 'url(' + imageD + ')' }" @click="SetGallery(3)">
             <div class="clone"><img src="../../assets/galleryExpand.svg" alt="Expand">
             </div>
           </div>
@@ -75,6 +75,17 @@ import imageA from '../../assets/a.jpeg';
 import imageB from '../../assets/b.jpeg';
 import imageC from '../../assets/c.jpeg';
 import imageD from '../../assets/d.jpeg';
+
+import frameA1 from '../../assets/1.jpg';
+import frameA2 from '../../assets/2.jpg';
+import frameA3 from '../../assets/3.jpg';
+import frameA4 from '../../assets/4.jpg';
+
+import frameB1 from '../../assets/5.jpg';
+import frameB2 from '../../assets/6.jpg';
+import frameB3 from '../../assets/7.jpg';
+import frameB4 from '../../assets/8.jpg';
+
 import {useI18n} from "vue-i18n";
 
 export default {
@@ -87,84 +98,67 @@ export default {
 
   data(){
     return{
+      counter: 0,
+      position: 1,
+      DelaySwitch: false,
+
       imageA: imageA,
       imageB: imageB,
       imageC: imageC,
-      imageD: imageD
+      imageD: imageD,
+
+      PhotoFrame: [
+          [frameA1, frameA2, frameA3, frameA4],
+          [frameB1, frameB2, frameB3, frameB4],
+          [frameA1],
+          [frameB1]
+      ]
+    }
+  },
+
+  methods: {
+    LeftCounter: function () {
+      this.counter--;
+      if (this.counter < 0 ){
+        this.counter = this.PhotoFrame[this.position].length - 1;
+      }
+    },
+
+    Left: function() {
+      this.DelaySwitch = true;
+      setTimeout(() => this.LeftCounter(), 200);
+      setTimeout(() => this.DelaySwitch = false, 300);
+    },
+
+    RightCounter: function () {
+      this.counter++
+      if (this.counter > this.PhotoFrame[this.position].length - 1){
+        this.counter = 0;
+      }
+    },
+
+    Right: function (){
+      this.DelaySwitch = true;
+      setTimeout(() => this.RightCounter(), 200);
+      setTimeout(() => this.DelaySwitch = false, 300);
+    },
+
+    SetGallery: function (number) {
+      this.counter = 0;
+      this.position = number;
     }
   },
 
   mounted() {
     $(".galleryPlate").fadeOut('fast');
 
-    let $number = 0;
-    const arr = ["assets/1.jpg", "assets/2.jpg","assets/3.jpg","assets/4.jpg","assets/5.jpg","assets/6.jpg","assets/7.jpg","assets/8.jpg"];
-
     $("#close").click(function(){
       $(".galleryPlate").fadeOut('slow');
     });
 
-    $("#photoOne").click(function(){
-      $("#invisible").attr('src', arr[0]).ready(function () {
-        $number = 0;
-        $(".photoArea").css('background-image', 'url(' + arr[0] +')').ready(function () {
+    $(".photoFrame").click(function(){
           $(".galleryPlate").fadeIn('slow');
-        });
-      });
     });
-
-    $("#photoTwo").click(function(){
-      $("#invisible").attr('src', arr[2]).ready(function () {
-        $number = 2;
-        $(".photoArea").css('background-image', 'url(' + arr[2] +')').ready(function () {
-          $(".galleryPlate").fadeIn('slow');
-        });
-      });
-    });
-
-    $("#photoThree").click(function(){
-      $("#invisible").attr('src', arr[4]).ready(function () {
-        $number = 4;
-        $(".photoArea").css('background-image', 'url(' + arr[4] +')').ready(function () {
-          $(".galleryPlate").fadeIn('slow');
-        });
-      });
-    });
-
-    $("#photoFour").click(function(){
-      $("#invisible").attr('src', arr[6]).ready(function () {
-        $number = 6;
-        $(".photoArea").css('background-image', 'url(' + arr[6] +')').ready(function () {
-          $(".galleryPlate").fadeIn('slow');
-        });
-      });
-    });
-
-    $("#left").click(
-        function (){
-          $(".photoArea").fadeOut(100,function () {
-            $number -= 1;
-            if ($number < 0){$number = 7;}
-            $("#invisible").attr('src', arr[$number]).ready(function(){
-              $(".photoArea").css('background-image', 'url(' + arr[$number] +')').ready(function(){
-                $(".photoArea").fadeIn(500);
-              });
-            });
-          });
-        });
-
-    $("#right").click(
-        function (){
-          $(".photoArea").fadeOut(100,function () {
-            $number += 1;
-            if ($number > 7){$number = 0;}
-            $("#invisible").attr('src', arr[$number]).ready(function(){
-              $(".photoArea").css('background-image', 'url(' + arr[$number] +')').ready(function(){
-                $(".photoArea").fadeIn(500);
-              });
-            });
-          });
-        });
   }
 }
 </script>
@@ -174,6 +168,16 @@ section{
   position: relative;
   width: 100%;
   border-bottom: 1px solid #808080;
+}
+
+.fadeOut{
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.fadeIn{
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .galleryPlate{

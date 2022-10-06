@@ -77,7 +77,7 @@
                 <p><span class="textQuickG">Freelance: </span>yes</p>
                 <p><span class="textQuickG">{{ t('contactAddress') }} </span> Bratislava V</p>
                 <p><span class="textQuickG">{{ t('contactPhone') }} </span> +421950596214</p>
-                <p><span class="textQuickG">Email: </span>bodnar.marian@bmcode.sk</p>
+                <p><span class="textQuickG">Email: </span>bodnar.marian@gmail.com</p>
               </div>
               <div class="space"></div>
             </div>
