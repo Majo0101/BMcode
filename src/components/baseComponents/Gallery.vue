@@ -6,6 +6,9 @@
         <img :src="PhotoFrame[position][counter]"  id="invisible" alt="Invisible">
         <div id="left" @click="Left"><img src="../../assets/galleryLeft.svg" alt="Left"></div>
         <div id="right" @click="Right"><img src="../../assets/galleryRight.svg" alt="Right"></div>
+        <div class="photoCounter">
+          {{ counter + 1 }} - {{PhotoFrame[position].length}}
+        </div>
       </div>
     </div>
     <div class="textField">
@@ -76,15 +79,29 @@ import imageB from '../../assets/b.jpeg';
 import imageC from '../../assets/c.jpeg';
 import imageD from '../../assets/d.jpeg';
 
-import frameA1 from '../../assets/1.jpg';
-import frameA2 from '../../assets/2.jpg';
-import frameA3 from '../../assets/3.jpg';
-import frameA4 from '../../assets/4.jpg';
+import frameA1 from '../../assets/a1.jpg';
+import frameA2 from '../../assets/a2.jpg';
+import frameA3 from '../../assets/a3.jpg';
+import frameA4 from '../../assets/a4.jpg';
+import frameA5 from '../../assets/a5.jpg';
 
-import frameB1 from '../../assets/5.jpg';
-import frameB2 from '../../assets/6.jpg';
-import frameB3 from '../../assets/7.jpg';
-import frameB4 from '../../assets/8.jpg';
+import frameB1 from '../../assets/b1.jpg';
+import frameB2 from '../../assets/b2.jpg';
+
+
+import frameC1 from '../../assets/c1.jpg';
+import frameC2 from '../../assets/c2.jpg';
+import frameC3 from '../../assets/c3.jpg';
+import frameC4 from '../../assets/c4.jpg';
+import frameC5 from '../../assets/c5.jpg';
+import frameC6 from '../../assets/c6.jpg';
+import frameC7 from '../../assets/c7.jpg';
+
+import frameD1 from '../../assets/d1.jpg';
+import frameD2 from '../../assets/d2.jpg';
+import frameD3 from '../../assets/d3.jpg';
+import frameD4 from '../../assets/d4.jpg';
+
 
 import {useI18n} from "vue-i18n";
 
@@ -108,10 +125,10 @@ export default {
       imageD: imageD,
 
       PhotoFrame: [
-          [frameA1, frameA2, frameA3, frameA4],
-          [frameB1, frameB2, frameB3, frameB4],
-          [frameA1],
-          [frameB1]
+          [frameA1, frameA2, frameA3, frameA4, frameA5],
+          [frameB1, frameB2],
+          [frameC1, frameC2, frameC3, frameC4, frameC5, frameC6, frameC7],
+          [frameD1, frameD2, frameD3, frameD4]
       ]
     }
   },
@@ -168,6 +185,12 @@ section{
   position: relative;
   width: 100%;
   border-bottom: 1px solid #808080;
+}
+
+.photoCounter{
+  color: white;
+  position: absolute;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .fadeOut{
@@ -453,9 +476,9 @@ section{
     "gallerySub": "FOTO",
     "galleryPhotoTitle1": "EMBEDDED",
     "galleryPhotoSub1": "ALBUM",
-    "galleryPhotoTitle2": "PRÁCA",
+    "galleryPhotoTitle2": "STARÁ PRÁCA",
     "galleryPhotoSub2": "ALBUM",
-    "galleryPhotoTitle3": "PROGRAMOVANIE",
+    "galleryPhotoTitle3": "CESTOVANIE",
     "galleryPhotoSub3": "ALBUM",
     "galleryPhotoTitle4": "OBĽÚBENÉ",
     "galleryPhotoSub4": "ALBUM"
@@ -465,9 +488,9 @@ section{
     "gallerySub": "SOME PHOTOS",
     "galleryPhotoTitle1": "EMBEDDED",
     "galleryPhotoSub1": "PHOTO FRAME",
-    "galleryPhotoTitle2": "OLD WORK",
+    "galleryPhotoTitle2": "OLD JOBS",
     "galleryPhotoSub2": "PHOTO FRAME",
-    "galleryPhotoTitle3": "PROGRAMMING",
+    "galleryPhotoTitle3": "TRAVEL",
     "galleryPhotoSub3": "PHOTO FRAME",
     "galleryPhotoTitle4": "FAVORITES",
     "galleryPhotoSub4": "PHOTO FRAME"
