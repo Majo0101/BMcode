@@ -11,11 +11,11 @@
         <img src="../assets/github.svg" alt="GitHub">
       </div>
     </a>
-    <a href="https://www.facebook.com/profile.php?id=100016839404002">
-      <div class="logo">
-        <img src="../assets/facebook.svg" alt="Facebook">
-      </div>
-    </a>
+<!--    <a href="https://www.facebook.com/profile.php?id=100016839404002">-->
+<!--      <div class="logo">-->
+<!--        <img src="../assets/facebook.svg" alt="Facebook">-->
+<!--      </div>-->
+<!--    </a>-->
     <a href="https://www.ktopomozeukrajine.sk/">
       <div class="logo">
         <img src="../assets/ukraine.svg" alt="WhatsApp" style="width: 2em; height: 2em; filter: invert(0%)">

@@ -94,7 +94,7 @@
                 <div class="col-10">
                   <div class="textQuickWBolder">
                     <p>Python</p>
-                    <p>PHP</p>
+                    <p>SQL</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="col-10">
                   <div class="textQuickWBolder">
-                    <p>MYSQL</p>
+                    <p>SPRING</p>
                     <p>JAVA</p>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ section{
 
 @keyframes animFour {
   0%{height: 0}
-  100%{height: 2.08em}
+  100%{height: 4.16em}
 }
 
 .five{
@@ -281,7 +281,7 @@ section{
     "skillBar1": "Táto stránka odzrkadľuje môj level v čase jej programovania.",
     "skillBar2": "Rozširovanie funkčnosti webstránok a webové aplikácie.",
     "skillBar3": "Schopnosť navrhnúť a vyrobiť funkčné embedded zariadenia.",
-    "skillBar4": "Malé appky. BMcode využíva PHP mail() a kontroluje Captcha.",
+    "skillBar4": "Spracovanie veľkých dát. Správa DB.",
     "skillBar5": "Výroba ovládania na mieru spolu s elektrickou časťou.",
     "skillBar6": "Teoretické vedomosti a jednoduché aplikácie."
   },
@@ -291,7 +291,7 @@ section{
     "skillBar1": "This page reflects my level at the time of its programming.",
     "skillBar2": "Extending the functionality of websites and web applications.",
     "skillBar3": "Ability to design and manufacture functional embedded devices.",
-    "skillBar4": "Small apps. BMcode uses PHP mail () and checks Captcha.",
+    "skillBar4": "Processing big data. Managing databases.",
     "skillBar5": "Production of custom controls together with the electrical part.",
     "skillBar6": "Theoretical knowledge and simple applications."
   }

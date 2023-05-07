@@ -88,7 +88,6 @@ import frameA5 from '../../assets/a5.jpg';
 import frameB1 from '../../assets/b1.jpg';
 import frameB2 from '../../assets/b2.jpg';
 
-
 import frameC1 from '../../assets/c1.jpg';
 import frameC2 from '../../assets/c2.jpg';
 import frameC3 from '../../assets/c3.jpg';

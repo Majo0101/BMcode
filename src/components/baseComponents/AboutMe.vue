@@ -15,9 +15,9 @@
         <p>
           {{ t('aboutMeText1') }}
         </p><br>
-        <p>
-          {{ t('aboutMeText2') }}
-        </p>
+<!--        <p>-->
+<!--          {{ t('aboutMeText2') }}-->
+<!--        </p>-->
       </div>
     </div><br><br>
     <div class="textField">
@@ -34,7 +34,7 @@
             <div class="col-md-auto">
               <div class="textQuickW">
                 <p>
-                  31
+                  32
                 </p>
               </div>
             </div>

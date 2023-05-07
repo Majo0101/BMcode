@@ -28,10 +28,10 @@
           <div class="colName">
             <div class="textQuickW">
               <h5 style="font-size: 150%; font-weight: bolder">
-                {{ t('experienceJob1') }}
+                {{ t('experienceJob3') }}
               </h5>
               <p style="font-weight: bolder">
-                {{ t('experiencePlace1') }}
+                {{ t('experiencePlace3') }}
               </p>
             </div>
           </div>
@@ -40,13 +40,13 @@
           <div class="row">
             <div class="textQuickW">
               <h6 style="font-weight: bolder">
-                {{ t('experiencePosition1') }}
+                {{ t('experiencePosition3') }}
               </h6><br>
             </div>
           </div><br>
           <div class="row">
             <div class="textQuickW" style="border-left: 1px solid white; padding-left: 0.5em">
-              {{ t('experienceText1') }}
+              {{ t('experienceText3') }}
             </div>
           </div>
         </div>
@@ -94,10 +94,10 @@
           <div class="colName">
             <div class="textQuickW">
               <h5 style="font-size: 150%; font-weight: bolder">
-                {{ t('experienceJob3') }}
+                {{ t('experienceJob1') }}
               </h5>
               <p style="font-weight: bolder">
-                {{ t('experiencePlace3') }}
+                {{ t('experiencePlace1') }}
               </p>
             </div>
           </div>
@@ -106,13 +106,13 @@
           <div class="row">
             <div class="textQuickW">
               <h6 style="font-weight: bolder">
-                {{ t('experiencePosition3') }}
+                {{ t('experiencePosition1') }}
               </h6><br>
             </div>
           </div><br>
           <div class="row">
             <div class="textQuickW" style="border-left: 1px solid white; padding-left: 0.5em">
-              {{ t('experienceText3') }}
+              {{ t('experienceText1') }}
             </div>
           </div>
         </div>
@@ -398,8 +398,8 @@ section{
     "experienceText2": "Servis Bioplynové stanice (Agrikomp technológia). Stavby technologických rozvádzačov, ovládania na mieru, výmena výkonových súčastí (do 1000V) a diagnostika porúch(merania atď.) Znalosť PLC Beckhoff, Siemens, Wago. Opravy rôznych technológií výťahy, kogeneračné jednotky, štiepkové kotle atď. Prekládka VN/NN vedení a kioskov. Revízie a prehliadky. Čítanie schém a výkresov samozrejmosťou. Manažment.",
     "experienceJob3": "Západoslovenská distribučná a.s.",
     "experiencePlace3": "Bratislava",
-    "experiencePosition3": "Technik správy merania",
-    "experienceText3": "Správa a úprava dát v systéme SAP, ISU/DM a EDM. Vytváranie a špecifikovanie zostavy pre štatistiku. Správa tímových IT systémov. Vyhľadávanie procesných anomálií. Príprava a aktualizácia pracovných postupov. Kooperácia v pracovnej skupine pri IT business projektoch. Automatizácia procesov pomocou MS RPA nástrojov."
+    "experiencePosition3": "Technik SMART merania",
+    "experienceText3": "Správa a úprava dát v systéme SAP, ISU/DM a EDM. Vytváranie a špecifikovanie zostavy pre štatistiku. Správa tímových IT systémov. Príprava a aktualizácia pracovných postupov. Kooperácia v pracovnej skupine pri IT business projektoch. Automatizácia procesov pomocou MS RPA nástrojov. Spracovanie a vizualizácia dát Python pandas, matplotlib, SQLite, PowerBi."
   },
   "en": {
     "experienceTitle": "EXPERIENCE",
@@ -414,8 +414,8 @@ section{
     "experienceText2": "Biogas plant service (Agrikomp technology). Construction of technological switchboards, custom control, replacement of power components (Max 1000V) and fault diagnostics (measurements, etc.). Knowledge of PLC Beckhoff, Siemens, Wago. Repairs of various technologies like elevators, cranes, cogeneration units, boilers, etc. Transhipment of HV / LV lines and kiosks. Revisions and inspections. Reading drawings and diagrams of course. Management of employees. A complete automatization solutions.",
     "experienceJob3": "Západoslovenská distribučná a.s.",
     "experiencePlace3": "Bratislava",
-    "experiencePosition3": "Measurement Management Technician",
-    "experienceText3": "Management and editing of data in the SAP system, ISU/DM and EDM. Creating and specifying a report for statistics. Management of team IT systems. Searching for process anomalies. Preparation and updating of work procedures. Cooperation in the working group for IT business projects. Process automation using MS RPA tools."
+    "experiencePosition3": "SMART Measurement Technician",
+    "experienceText3": "Management and editing of data in the SAP system, ISU/DM and EDM. Creating and specifying a report for statistics. Management of team IT systems. Preparation and updating of work procedures. Cooperation in the working group for IT business projects. Process automation with MS RPA tools. Data processing and visualization with Python pandas, matplotlib, SQLite, PowerBi."
   }
 }
 </i18n>
