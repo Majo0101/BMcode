@@ -88,6 +88,8 @@
 
 <script>
 import {useI18n} from "vue-i18n";
+import x from '../assets/x.svg'
+import expand from '../assets/expand.svg'
 
 export default {
   name: "NavBar",
@@ -119,7 +121,7 @@ export default {
       let absoluteWidth = window.screen.width;
       if (absoluteWidth < 1024){
         $(".navButtonField").css("display", "none");
-        $("#openClose").attr('src', 'assets/expand.svg');
+        $("#openClose").attr('src', expand);
         menu_toggle = true;
       }else{
         $(".navButtonField").css("display", "flex");
@@ -178,7 +180,7 @@ export default {
       if (menu_toggle){
         menu_toggle = false;
         $(".rollButton").fadeOut('fast', function () {
-          $("#openClose").attr('src', 'assets/x.svg').ready(function () {
+          $("#openClose").attr('src', x).ready(function () {
             $(".navButtonField").animate({height: 'toggle'},function () {
               $(".rollButton").fadeIn('fast',function () {
               });
@@ -188,7 +190,7 @@ export default {
       }else{
         menu_toggle = true;
         $(".rollButton").fadeOut('fast', function () {
-          $("#openClose").attr('src', 'assets/expand.svg').ready(function () {
+          $("#openClose").attr('src', expand).ready(function () {
             $(".navButtonField").animate({height: 'toggle'},function () {
               $(".rollButton").fadeIn('fast',function () {
               });
@@ -203,7 +205,7 @@ export default {
       if (absoluteWidth < 1024){
         menu_toggle = true;
         $(".navButtonField").animate({height: 'toggle'},function () {
-          $("#openClose").attr('src', 'assets/expand.svg');
+          $("#openClose").attr('src', expand);
         });
       }
     })
@@ -212,7 +214,7 @@ export default {
       let absoluteWidth = window.screen.width;
       if (absoluteWidth < 1024){
         $(".navButtonField").css("display", "none");
-        $("#openClose").attr('src', 'assets/expand.svg');
+        $("#openClose").attr('src', expand);
         menu_toggle = true;
       }else{
         $(".navButtonField").css("display", "flex");
